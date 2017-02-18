@@ -1,0 +1,18 @@
+# Beego stuff
+lastupdate.tmp
+routers/comments*_.go
+
+# Swagger files
+swagger/
+swagger.zip
+
+# Binary files
+/BeegoAngularGulp.exe
+/BeegoAngularGulp.exe~
+/BeegoAngularGulp.zip
+/BeegoAngularGulp
+
+# Dependencies and stuff
+tmp/
+vendor/
+node_modules/

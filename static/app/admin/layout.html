@@ -1,0 +1,43 @@
+<header>
+	<nav class="top-nav">
+		<div class="container">
+			<div class="nav-wrapper">
+				<a ng-if="0" ng-repeat-start="breadcrumb in breadcrumbs"></a>
+				<ng-switch on="$last">
+					<a ng-switch-when="true" class="page-title unlinked">{{breadcrumb.title}}</a>
+					<a ng-switch-default ui-sref="{{breadcrumb.sref}}" ui-sref-opts="{ reload: true }" class="page-title linked">{{breadcrumb.title}}</a>
+					<i ng-switch-default class="material-icons separator">keyboard_arrow_right</i>
+				</ng-switch>
+				<a ng-if="0" ng-repeat-end></a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only" data-sidenav="left" data-menuwidth="300" data-closeonclick="false">
+			<i class="material-icons">menu</i>
+		</a>
+	</div>
+	<ul id="slide-out" class="side-nav fixed">
+		<li>
+			<div class="userView">
+				<div class="background">
+				</div>
+				<a><img class="circle" src="/static/img/avatar-default.png"></a>
+				<a><span class="white-text name">{{userName}}</span></a>
+				<a><span class="white-text email">{{userEmail}}</span></a>
+			</div>
+		</li>
+		<li><a ui-sref="admin.dashboard()" ui-sref-opts="{ reload: true }">Dashboard</a></li>
+		<li><a ui-sref="admin.stuff()" ui-sref-opts="{ reload: true }">Stuff</a></li>
+		<li><a ui-sref="admin.stuff-detail({stuffId: 1})" ui-sref-opts="{ reload: true }">Stuff #1</a></li>
+		<li>
+			<div class="divider"></div>
+		</li>
+		<li><a class="waves-effect" ng-click="logout()">Logout</a></li>
+	</ul>
+</header>
+<main>
+	<div class="container center">
+		<div ui-view></div>
+	</div>
+</main>

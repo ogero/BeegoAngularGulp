@@ -1,0 +1,20 @@
+@mixin med-to-up {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin transition($name, $timet, $effectt){
+	transition: $name $timet $effectt;
+	-webkit-transition: $name $timet $effectt;
+	-moz-transition: $name $timet $effectt;
+	-o-transition: $name $timet $effectt;
+	-ms-transition: $name $timet $effectt;
+}
+
+@mixin transitions($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}

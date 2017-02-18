@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col s12 m6 offset-m3 box z-depth-1 grey lighten-4">
+		<form name="loginForm" ng-submit="submitLogin(loginForm.$valid)">
+			<div input-field>
+				<input id="email" type="email" ng-required="true" ng-model="loginInputs.username">
+				<label for="email">Email</label>
+			</div>
+			<div input-field>
+				<input id="password" type="password" ng-required="true" ng-model="loginInputs.password">
+				<label for="password">Password</label>
+			</div>
+			<div class="row">
+				<button type="submit" class="col s12 btn btn-large waves-effect waves-light">Login</button>
+			</div>
+		</form>
+	</div>
+</div>
